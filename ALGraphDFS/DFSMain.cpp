@@ -1,0 +1,26 @@
+#include <iostream>
+#include "ALGraphDFS.h"
+using namespace std;
+
+int main(void)
+{
+	ALGraph graph(7);
+
+	graph.AddEdge(A, B);
+	graph.AddEdge(A, D);
+	graph.AddEdge(B, C);
+	graph.AddEdge(D, C);
+	graph.AddEdge(D, E);
+	graph.AddEdge(E, F);
+	graph.AddEdge(E, G);
+
+	graph.ShowGraphEdgeInfo();
+	cout << endl;
+
+	graph.DFShowGraphVertex(A); cout << endl;
+	graph.DFShowGraphVertex(C); cout << endl;
+	graph.DFShowGraphVertex(E); cout << endl;
+	graph.DFShowGraphVertex(G); cout << endl;
+
+	return 0;
+}
